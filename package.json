@@ -1,7 +1,7 @@
 {
-  "name": "aoe_technology_radar",
-  "version": "3.5.0",
-  "description": "AOE Technology Radar",
+  "name": "typeform_technology_radar",
+  "version": "0.0.0",
+  "description": "Typeform Technology Radar",
   "author": "AOE GmbH <contact-de@aoe.com> (http://www.aoe.com)",
   "license": "Apache-2.0",
   "repository": {

@@ -14,7 +14,7 @@
         ]
       },
       {
-        "headline": "What is the AOE Technology Radar",
+        "headline": "What is the Typeform Technology Radar",
         "values": [
           "The Tech Radar is an overview of different technologies - from languages, frameworks, tools and patterns to platforms - that we consider \"new or mentionable\". The radar therefore doesn't provide an overview of all established technologies - but it focuses on items that have recently gained in importance or changed."
         ]
@@ -39,7 +39,7 @@
     "quadrants": [
       {
         "description": "We've placed development languages (such as Scala or Golang) here, as well as more low-level development frameworks (such as Play or Symfony), which are useful for implementing custom software of all kinds.",
-        "name": "Languages and Frameworks"
+        "name": "Languages & Frameworks"
       },
       {
         "description": "Here we put different software tools - from small helpers to bigger software projects",
@@ -47,11 +47,11 @@
       },
       {
         "description": "Patterns are so important, and a lot of them are valid for a long time (compared to some tools or frameworks). So, this is the category where we put information on methods and patterns concerning development, continuous x, testing, organization, architecture, etc.",
-        "name": "Methods and Patterns"
+        "name": "Data"
       },
       {
         "description": "(including AOE internal Services): Here we include infrastructure platforms and services. We also use this category to communicate news about AOE services that we want all AOE teams to be aware of.",
-        "name": "Platforms and Operations"
+        "name": "Platform & Infra"
       }
     ],
     "quadrantsPreDescription": "The quadrants are:",
