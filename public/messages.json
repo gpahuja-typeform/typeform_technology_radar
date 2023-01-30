@@ -1,7 +1,5 @@
 {
-  "footerFootnote": "AOE is a leading global provider of services for digital transformation and digital business models. AOE relies exclusively on established Enterprise Open Source technologies. This leads to innovative solutions, digital products and portals in agile software projects, and helps build long-lasting, strategic partnerships with our customers.",
-  "legalInformationLabel": "Legal Information",
-  "legalInformationLink": "https://www.aoe.com/en/imprint.html",
+  "footerFootnote": "At Typeform, we help brands treat people like people with thoughtfully-designed tools that turn digital interactions into lasting personal connections. Because what do customers, prospects, users, leads, recruits, and employees (the list goes on) all have in common? They’re all people. And people are essential to growth. With our no-code forms, quizzes, surveys, and asynchronous videos, brands can engage their audience and grow their business with ease.",
   "pageHelp": {
     "headlinePrefix": "How to use the",
     "paragraphs": [
@@ -75,9 +73,9 @@
     ],
     "ringsPreDescription": "Each of the items is classified in one of these rings:",
     "sourcecodeLink": {
-      "description": "Contributions and source code of the AOE Tech Radar are on github:",
-      "href": "https://github.com/AOEpeople/aoe_technology_radar",
-      "name": "AOE Tech Radar on Github"
+      "description": "",
+      "href": "",
+      "name": ""
     }
   },
   "pageIndex": {
@@ -94,32 +92,24 @@
   "searchPlaceholder": "What are you looking for?",
   "socialLinks": [
     {
-      "href": "https://www.facebook.com/aoepeople",
+      "href": "https://www.facebook.com/typeform/",
       "iconName": "facebook"
     },
     {
-      "href": "https://twitter.com/aoepeople",
+      "href": "https://www.twitter.com/typeform/",
       "iconName": "twitter"
     },
     {
-      "href": "https://www.linkedin.com/company/aoe",
+      "href": "https://www.linkedin.com/company/typeform-com/",
       "iconName": "linkedIn"
     },
     {
-      "href": "https://www.xing.com/company/aoe",
-      "iconName": "xing"
-    },
-    {
-      "href": "https://www.instagram.com/aoepeople",
+      "href": "https://www.instagram.com/typeform/",
       "iconName": "instagram"
     },
     {
-      "href": "https://www.youtube.com/user/aoepeople",
+      "href": "https://www.youtube.com/channel/UC2nRv6J0FsJVePJTLhUDKgg/",
       "iconName": "youtube"
-    },
-    {
-      "href": "https://github.com/aoepeople",
-      "iconName": "github"
     }
   ],
   "socialLinksLabel": "Follow us:"

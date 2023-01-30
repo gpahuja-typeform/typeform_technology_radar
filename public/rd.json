@@ -4,7 +4,7 @@
       "flag": "default",
       "featured": true,
       "name": "datadog",
-      "title": "datadog",
+      "title": "Datadog",
       "quadrant": "platform-and-infra",
       "ring": "adopt",
       "body": "<p>datadog is an observability service for cloud-scale applications, providing monitoring of servers, databases, tools, and services, through a SaaS-based data analytics platform. Check out more about <strong><a target=\"_blank\" href=\"https:\/\/www.notion.so\/typeform\/datadog-Monitors-80409824565643bb8dc0ff7a97e1b956\">datadog in Typeform.<\/a><\/strong><\/p>",
@@ -1081,5 +1081,5 @@
       "release": "2023-01-01"
      }
   ],
-  "releases": []
+  "releases": ["2023-01-01"]
 }

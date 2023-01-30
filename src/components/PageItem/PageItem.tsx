@@ -129,14 +129,14 @@ const PageItem: React.FC<Props> = ({
               className="markdown"
               dangerouslySetInnerHTML={{ __html: item.body }}
             />
-            <ItemTags tags={item.tags} />
-            {item.revisions.length > 1 && (
+            {/* {item.tags && <ItemTags tags={item.tags} />} */}
+            {/* {item.revisions.length > 1 && (
               <ItemRevisions
                 revisions={item.revisions.slice(1)}
                 dateFormat={config.dateFormat}
                 config={config}
               />
-            )}
+            )} */}
           </div>
         </div>
       </div>
