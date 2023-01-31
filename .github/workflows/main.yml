@@ -6,7 +6,7 @@ on:
     branches:
       - main
 jobs:
-  test:
+  build-radar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -16,4 +16,73 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
-      - run: if [ -n "$(git status --porcelain)" ]; then echo 'workspace is dirty after rebuilding' ; git status ; git diff ; exit 1 ; fi
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: radar-files
+          path: radar-static
+  deploy-radar:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build-radar
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v1
+        with:
+          name: radar-files
+          path: radar-static
+
+      - name: Set branch environment variables
+        id: branch-target
+        if: github.event_name != 'pull_request'
+        run: |
+          echo "::set-output name=dir::."
+      - name: Set PR environment variables
+        id: pr-target
+        if: github.event_name == 'pull_request'
+        env:
+          PULL_REQUEST_NUMBER: ${{ github.event.number }}
+        run: |
+          echo "::set-output name=dir::pull/${PULL_REQUEST_NUMBER}"
+      # Main branch deployment is performed on root directory
+      - name: Move branch files
+        if: github.event_name != 'pull_request'
+        run: |
+          find ${TARGET_DIR} -maxdepth 1 -type f -delete
+          mv radar-static/* ${TARGET_DIR}
+        env:
+          TARGET_DIR: ${{ steps.branch-target.outputs.dir }}
+
+      - name: Move PR files
+        if: github.event_name == 'pull_request'
+        run: |
+          mkdir -p ${TARGET_DIR}
+          rm -rf ${TARGET_DIR}
+          mv radar-static ${TARGET_DIR}
+        env:
+          TARGET_DIR: ${{ steps.pr-target.outputs.dir }}
+
+      - name: Commit updates
+        run: |
+          git add .
+          git status
+          git diff --staged --quiet && echo 'No changes to commit; exiting!' && exit 0
+          git pull --no-edit --quiet
+          git commit -m "Deploy radar for ${TARGET_DIR}."
+          git push origin gh-pages
+        env:
+          TARGET_DIR: ${{ steps.branch-target.outputs.dir }}${{ steps.pr-target.outputs.dir }}
+          GIT_AUTHOR_EMAIL: ${{ github.actor }}@users.noreply.github.com
+          GIT_AUTHOR_NAME: ${{ github.actor }}
+          GIT_COMMITTER_EMAIL: ${{ github.actor }}@users.noreply.github.com
+          GIT_COMMITTER_NAME: ${{ github.actor }}
