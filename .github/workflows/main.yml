@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: radar-files
-          path: radar-static
+          path: build
   deploy-radar:
     name: Deploy
     runs-on: ubuntu-latest
@@ -40,7 +40,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: radar-files
-          path: radar-static
+          path: build
 
       - name: Set branch environment variables
         id: branch-target
