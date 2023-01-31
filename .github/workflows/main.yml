@@ -59,7 +59,7 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           find ${TARGET_DIR} -maxdepth 1 -type f -delete
-          mv radar-static/* ${TARGET_DIR}
+          mv build/* ${TARGET_DIR}
         env:
           TARGET_DIR: ${{ steps.branch-target.outputs.dir }}
 
@@ -68,7 +68,7 @@ jobs:
         run: |
           mkdir -p ${TARGET_DIR}
           rm -rf ${TARGET_DIR}
-          mv radar-static ${TARGET_DIR}
+          mv build ${TARGET_DIR}
         env:
           TARGET_DIR: ${{ steps.pr-target.outputs.dir }}
 
