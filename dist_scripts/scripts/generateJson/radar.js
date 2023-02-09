@@ -199,6 +199,7 @@ var addRevisionToItem = function (item, revision) {
         quadrant: "",
         body: "",
         info: "",
+        team: ""
     }; }
     var newItem = __assign(__assign(__assign({}, item), revision), { body: ignoreEmptyRevisionBody(revision, item) });
     if (revisionCreatesNewHistoryEntry(revision, item)) {

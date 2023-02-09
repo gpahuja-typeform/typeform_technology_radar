@@ -11,6 +11,7 @@ export type ItemAttributes = {
   title: string;
   featured?: boolean;
   tags?: string[];
+  team: string;
 };
 
 export enum FlagType {

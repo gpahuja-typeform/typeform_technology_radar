@@ -36,19 +36,19 @@
     ],
     "quadrants": [
       {
-        "description": "We've placed development languages (such as Scala or Golang) here, as well as more low-level development frameworks (such as Play or Symfony), which are useful for implementing custom software of all kinds.",
+        "description": "We've placed development languages here, as well as frameworks, which are used for implementing different feature in Typeform.",
         "name": "Languages & Frameworks"
       },
       {
-        "description": "Here we put different software tools - from small helpers to bigger software projects",
+        "description": "Here we put different software tools - not only used in engineering but in whole Typeform",
         "name": "Tools"
       },
       {
-        "description": "Patterns are so important, and a lot of them are valid for a long time (compared to some tools or frameworks). So, this is the category where we put information on methods and patterns concerning development, continuous x, testing, organization, architecture, etc.",
+        "description": "Here we put information of the ecosystem which we use to maintain our data, like Databases, cache etc.",
         "name": "Data"
       },
       {
-        "description": "(including AOE internal Services): Here we include infrastructure platforms and services. We also use this category to communicate news about AOE services that we want all AOE teams to be aware of.",
+        "description": "This quadrant clusters technologies around the infrastructure and related platforms.",
         "name": "Platform & Infra"
       }
     ],
@@ -69,6 +69,10 @@
       {
         "description": "This category is a bit special. Unlike the others, we recommend to stop doing or using something. That does not mean that they are bad and it often might be ok to use them in existing projects. But we move things here if we think we shouldn't do them anymore - because we see better options or alternatives now.",
         "name": "Hold"
+      },
+      {
+        "description": "That does not mean that they are bad and it often might be ok to use them in existing projects. But we move things here if we think we shouldn't do them anymore - because we see better options or alternatives now.",
+        "name": "Deprecate"
       }
     ],
     "ringsPreDescription": "Each of the items is classified in one of these rings:",

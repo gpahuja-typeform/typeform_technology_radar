@@ -146,6 +146,7 @@ const addRevisionToItem = (
     quadrant: "",
     body: "",
     info: "",
+    team: ""
   },
   revision: Revision
 ): Item => {

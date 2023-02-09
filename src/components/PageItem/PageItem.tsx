@@ -129,6 +129,7 @@ const PageItem: React.FC<Props> = ({
               className="markdown"
               dangerouslySetInnerHTML={{ __html: item.body }}
             />
+            {item.team && <div className="markdown">Team: {item.team}</div>}
             {/* {item.tags && <ItemTags tags={item.tags} />} */}
             {/* {item.revisions.length > 1 && (
               <ItemRevisions
