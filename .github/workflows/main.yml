@@ -59,8 +59,7 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           find ${TARGET_DIR} -maxdepth 1 -type f -delete
-          rm -rf ${TARGET_DIR}
-          mv build/* ${TARGET_DIR}
+          cp -r build/* ${TARGET_DIR} && rm -R build/*
         env:
           TARGET_DIR: ${{ steps.branch-target.outputs.dir }}
 
